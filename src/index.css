@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: sotsana;
+        src: url('./RealState/Assets/Satoshi-Regular.ttf');
+    }
+
+   
+
+    body {
+        font-family: sotsana;
+        background-color: #FFFFFF;
+
+    }
+}
