@@ -10,7 +10,10 @@ import About from './RealState/pages/About';
 import Contact from './RealState/pages/Contact';
 import Blogs from './RealState/pages/Blogs';
 import Footer from './RealState/Components/Footer';
+import PropInfo from './RealState/Components/PropInfo';
+import AgentInfo from './RealState/Components/AgentInfo';
 import { Route,Routes } from 'react-router-dom';
+import Call from './RealState/Components/Call';
 
 
 
@@ -57,8 +60,11 @@ const App = () => {
      <Route path="/blogs" element={<Blogs />} />
      <Route path="/properties" element={<Properties/>} />
      <Route path="/agents" element={<Agents/>} />
+     <Route path="/agents/:agent_Id" element={<AgentInfo/>} />
+     <Route path="/properties/:prop_Id" element={<PropInfo/>} />
 
   </Routes>
+  <Call/>
   <Footer/>
   </div>
 

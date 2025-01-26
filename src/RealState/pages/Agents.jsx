@@ -1,31 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Call from "../Components/Call";
+import { agentsData } from "../Components/data";
+import { NavLink } from "react-router-dom";
 
 const Agents = () => {
-  const gridItemsRef = useRef([]);
 
-  useEffect(() => {
-    // Parallax effect handler
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      // Apply parallax effect to each grid item
-      gridItemsRef.current.forEach((item, index) => {
-        if (item) {
-          const speed = 0.3 + index * 0.05; // Adjust speed for each item
-          item.style.transform = `translateY(${scrollY * speed}px)`;
-        }
-      });
-    };
-
-    // Attach scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+ 
 
   return (
     <>
@@ -42,29 +22,23 @@ const Agents = () => {
           </h1>
         </div>
         <div className="grid sm:grid-cols-3 grid-cols-1 gap-4">
-          {[
-            "https://framerusercontent.com/images/bDbAKXnf93kg4xgDr2naOX9Hos.jpg",
-            "https://framerusercontent.com/images/I3gfAQe3MC9t15Ya3mItXqXoQ.jpg",
-            "https://framerusercontent.com/images/ROxXw7mHMl35ZpOmxuK3aG14rtc.jpg",
-            "https://framerusercontent.com/images/Kv3esn4UiahiRhRtlUWqTXUu0.jpg",
-            "https://framerusercontent.com/images/yuMT38uSZAf5RhP6xfohbl4kpg.jpg",
-            "https://framerusercontent.com/images/tU4X9bugMWK1LfGleFrokhGKi8.jpg",
-          ].map((src, index) => (
+          {agentsData.map((agent, index) => (
             <div
               key={index}
               className="h-[60vh] rounded-2xl bg-gray-200 overflow-hidden relative"
-              // Attach ref to each grid item
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/60 text-white font-semibold">
+              <NavLink to={`/agents/${agent.name}`} className='absolute inset-0'/>
+               
+              
                 <div className="absolute bottom-0 p-6">
-                  <h1 className="text-[10vw] sm:text-[2.5vw]">Ethan Carter</h1>
-                  <h2 className="text-[#CFD7E4]">Senior Consultant</h2>
+                  <h1 className="text-[10vw] sm:text-[2.5vw]">{agent.name}</h1>
+                  <h2 className="text-[#CFD7E4]">{agent.role}</h2>
                 </div>
               </div>
               <img
                 className="h-full w-full object-cover transition-transform duration-300 ease-out"
-                src={src}
-                alt={`Agent ${index + 1}`}
+                src={agent.url}
               />
             </div>
           ))}

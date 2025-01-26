@@ -28,7 +28,7 @@ function Home() {
         <Testimonials/>
         <Process/>
         <Blog/>
-        <Call/>
+       
         <Faq/>
 
     </div>

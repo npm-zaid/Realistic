@@ -11,7 +11,7 @@ const Contact = () => {
     </div>
     <div className='h-[90vh]  gap-8 relative text-center'>
 <img className='h-full w-full object-cover rounded-3xl ' src='https://framerusercontent.com/images/BeFApd0BHsxGKeT3w5xAG9ehdOk.jpg'/>
-<div className='p-5 absolute w-[80%]  right-[10%] rounded-3xl bg-white -bottom-10 grid sm:grid-cols-3  sm:gap-0 gap-5'>
+<div className='p-5 absolute w-[80%]  right-[10%] rounded-3xl bg-white -bottom-10 grid sm:grid-cols-3  sm:gap-0 gap-10'>
   <div className='flex  items-center sm:justify-center gap-5'>
     <div className='px-3 py-2 rounded-full bg-gray-200'><i className="text-2xl ri-mail-send-line"></i></div>
     <div className='font-semibold'>
