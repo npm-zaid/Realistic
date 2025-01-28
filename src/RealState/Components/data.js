@@ -160,3 +160,36 @@ export const agentsData = [
    
 
 ]
+
+export const blogsData=[
+    {
+        title: 'the ultimate guide to buying your first home',
+        btn:'Resources',
+        url:"https://framerusercontent.com/images/gdYugKRVEppOdaBaZCcPZkB1pM.jpg?scale-down-to=512",
+        para1:'Purchasing your first home is an exciting and significant milestone, but it can also be a daunting process filled with numerous steps and decisions. This guide aims to simplify the journey by providing you with essential information and tips to help you make informed choices.',
+        para2:'The first step in buying a home is determining your budget. This involves assessing your financial situation, including your savings, income, and any existing debts. Its crucial to get pre-approved for a mortgage to understand how much you can afford to spend. This will help narrow down your options and prevent you from falling in love with a home thats out of your reach.',
+        para3:'Once you have a clear budget, the next step is to research the housing market in your desired area. Look at property prices, neighborhood amenities, and future development plans. Understanding the market will give you a better idea of what to expect and help you spot good deals.',
+        para4:'Finding the right property involves more than just liking the look of a house. Consider factors such as the location, size, layout, and potential for future growth. Its important to think about your long-term needs and whether the property will accommodate them. Dont rush this decision; take your time to ensure it feels right.'
+       ,writer:'Lucas Thompson'
+    },
+    {
+        title: 'the ultimate guide to buying your first home',
+        btn:'Article',
+        url:"https://framerusercontent.com/images/AHgC80AiH0eRvNIrDtQIzemwidk.jpg",
+        para1:'Purchasing your first home is an exciting and significant milestone, but it can also be a daunting process filled with numerous steps and decisions. This guide aims to simplify the journey by providing you with essential information and tips to help you make informed choices.',
+        para2:'The first step in buying a home is determining your budget. This involves assessing your financial situation, including your savings, income, and any existing debts. Its crucial to get pre-approved for a mortgage to understand how much you can afford to spend. This will help narrow down your options and prevent you from falling in love with a home thats out of your reach.',
+        para3:'Once you have a clear budget, the next step is to research the housing market in your desired area. Look at property prices, neighborhood amenities, and future development plans. Understanding the market will give you a better idea of what to expect and help you spot good deals.',
+        para4:'Finding the right property involves more than just liking the look of a house. Consider factors such as the location, size, layout, and potential for future growth. Its important to think about your long-term needs and whether the property will accommodate them. Dont rush this decision; take your time to ensure it feels right.'
+       , writer:'Lucas Thompson'
+    },
+    {
+        title: 'the ultimate guide to buying your first home',
+        btn:'News',
+        url:"https://framerusercontent.com/images/DoL7rLpeJI9ztSVa21pdQO70.jpg",
+        para1:'Purchasing your first home is an exciting and significant milestone, but it can also be a daunting process filled with numerous steps and decisions. This guide aims to simplify the journey by providing you with essential information and tips to help you make informed choices.',
+        para2:'The first step in buying a home is determining your budget. This involves assessing your financial situation, including your savings, income, and any existing debts. Its crucial to get pre-approved for a mortgage to understand how much you can afford to spend. This will help narrow down your options and prevent you from falling in love with a home thats out of your reach.',
+        para3:'Once you have a clear budget, the next step is to research the housing market in your desired area. Look at property prices, neighborhood amenities, and future development plans. Understanding the market will give you a better idea of what to expect and help you spot good deals.',
+        para4:'Finding the right property involves more than just liking the look of a house. Consider factors such as the location, size, layout, and potential for future growth. Its important to think about your long-term needs and whether the property will accommodate them. Dont rush this decision; take your time to ensure it feels right.'
+       , writer:'Lucas Thompson'
+    },
+]

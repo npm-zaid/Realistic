@@ -34,7 +34,7 @@ function Hero() {
           your life <span className="text-[#3675ff]">perfectly</span>
         </h1>
       </div>
-      <div className="sm:h-[120vh] h-[70vh] w-full rounded-[50px] bg-zinc-300 relative overflow-hidden">
+      <div className="sm:h-[120vh] h-[70vh] w-full rounded-[50px]  relative overflow-hidden">
         <img
           ref={imgRef}
           className="sm:rounded-[50px] rounded-[30px] h-full w-full object-cover transition-transform duration-300 ease-out"

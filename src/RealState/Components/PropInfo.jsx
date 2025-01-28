@@ -34,7 +34,7 @@ const PropInfo = ()=>{
         <div className='flex flex-col w-[80vw] m-auto gap-10  my-10'>
         <p className='font-semibold text-gray-500 text-2xl '>{property.description}</p>
         <p className='px-5  py-2 bg-[#3675FF] rounded-full w-fit text-white font-semibold'>Book Now</p>
-        <p className='text-[6.5vw] font-semibold '><i className="text-[#3859FF] mr-2 ri-map-pin-fill"></i> {property.location}</p>
+        <p className='sm:text-[3vw] text-[6.5vw] font-semibold '><i className="text-[#3859FF] mr-2 ri-map-pin-fill"></i> {property.location}</p>
         </div>
 
         {/* CALCULATION */}

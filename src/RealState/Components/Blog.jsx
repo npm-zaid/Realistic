@@ -1,5 +1,6 @@
 import React from "react";
-
+import { blogsData } from "./data";
+import { NavLink } from "react-router-dom";
 
 const Blog = ()=>{
 return(
@@ -11,39 +12,21 @@ return(
     </div>
 
     <div className="grid sm:grid-cols-3 grid-cols-1 my-8 gap-6">
-        <div>
-            <div className="h-[50vh] rounded-3xl overflow-hidden">
-            <img className="h-full w-full object-cover" src="https://framerusercontent.com/images/gdYugKRVEppOdaBaZCcPZkB1pM.jpg?scale-down-to=512" />
-            </div>
-
-            <div className="flex flex-col gap-4 py-4">
-            <p className='bg-[#EDF3FF] w-fit font-semibold text-[#3675ff] px-3 py-2 rounded-full'>Resources</p>
-            <h1 className='sm:text-2xl text-[6.2vw] font-semibold '>The ultimate guide to buying your first home</h1>
-            </div>
-            
+       {blogsData.map((blog)=>{
+        return(
+        <NavLink to={`/blogs/${blog.btn}`}>
+        <div className="h-[50vh] rounded-3xl overflow-hidden">
+        <img className="h-full w-full object-cover" src={blog.url} />
         </div>
-        <div>
-            <div className="h-[50vh] rounded-3xl overflow-hidden">
-            <img className="h-full w-full object-cover" src='https://framerusercontent.com/images/DoL7rLpeJI9ztSVa21pdQO70.jpg' />
-            </div>
 
-            <div className="flex flex-col gap-4 py-4">
-            <p className='bg-[#EDF3FF] w-fit font-semibold text-[#3675ff] px-3 py-2 rounded-full'>Resources</p>
-            <h1 className='sm:text-2xl text-[6.2vw] font-semibold '>The ultimate guide to buying your first home</h1>
-            </div>
-            
+        <div className="flex flex-col gap-4 py-4">
+        <p className='bg-[#EDF3FF] w-fit font-semibold text-[#3675ff] px-3 py-2 rounded-full'>{blog.btn}</p>
+        <h1 className='sm:text-2xl text-[6.2vw] font-semibold '>{blog.title}</h1>
         </div>
-        <div>
-            <div className="h-[50vh] rounded-3xl overflow-hidden">
-            <img className="h-full w-full object-cover" src='https://framerusercontent.com/images/AHgC80AiH0eRvNIrDtQIzemwidk.jpg' />
-            </div>
-
-            <div className="flex flex-col gap-4 py-4">
-            <p className='bg-[#EDF3FF] w-fit font-semibold text-[#3675ff] px-3 py-2 rounded-full'>Resources</p>
-            <h1 className='sm:text-2xl text-[6.2vw] font-semibold '>The ultimate guide to buying your first home</h1>
-            </div>
-            
-        </div>
+        
+    </NavLink>
+      ) })} 
+       
     </div>
     </section>
 )

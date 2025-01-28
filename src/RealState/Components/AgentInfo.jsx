@@ -1,3 +1,4 @@
+
 import { agentsData } from "./data";
 import { NavLink, useParams } from "react-router-dom";
 const AgentInfo = () => {

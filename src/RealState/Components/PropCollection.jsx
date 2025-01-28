@@ -2,8 +2,9 @@ import React from 'react'
 import Card from './Card'
 
 import { cards } from './data'
-const filterCard = cards.filter(card => card.isSale===true);
-function Properties() {
+{/**const filterCard = cards.filter(card => card.isSale===true); */}
+
+function PropCollection() {
   return (
     <section className='min-h-screen'>
     <div className='flex sm:justify-between justify-start sm:items-center items-start sm:flex-row flex-col h-[40vh]'>
@@ -16,7 +17,7 @@ function Properties() {
     </div>
     <div className="cards-section grid sm:grid-cols-3 grid-cols-1  gap-4">
     {
-      filterCard.map((card, index) => (
+     cards.map((card, index) => (
         <Card key={index} {...card} />
       ))
     }
@@ -26,4 +27,4 @@ function Properties() {
   )
 }
 
-export default Properties
+export default PropCollection
