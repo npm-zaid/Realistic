@@ -1,3 +1,4 @@
+import Count from "./Count";
 
 
 const AboutInfo2=()=>{
@@ -14,6 +15,7 @@ const AboutInfo2=()=>{
 </div>
 
             </div>
+            <Count/>
         </section>
     )
 }

@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <>
-  <nav className={`fixed z-50  top-0 left-0 ease-in-out lg:backdrop-blur-sm w-full px-[5vw] py-4 flex justify-between items-center transition-all duration-500  ${showNavbar ? 'translate-y-[-100%] ' : 'translate-y-0'}`}>
+  <nav className={`fixed z-50  top-0 left-0 ease-in-out lg:backdrop-blur-sm w-full px-[3vw] py-4 flex justify-between items-center transition-all duration-500  ${showNavbar ? 'translate-y-[-100%] ' : 'translate-y-0'}`}>
 <div className='font-semibold flex items-center sm:text-[2.2vw] text-[7vw] group'><img className='sm:w-[4vw] w-[11vw] group-hover:rotate-[90deg] transition-all duration-500 ' src={logo} alt="" /><NavLink to='/'>Realistic</NavLink></div>
 <div className=' sm:flex font-semibold text-gray-700 hidden gap-8   text-lg'>
     <NavLink  className='relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 dark:after:bg-blue-500 

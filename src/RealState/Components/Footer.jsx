@@ -17,31 +17,30 @@ function Footer() {
 <div className='grid sm:grid-cols-3  grid-cols-2'>
   
    
-    <div className='w-full text-gray-500 flex flex-col gap-4 font-semibold sm:text-center'>
+    <div className='w-full text-gray-500 flex flex-col gap-4 font-semibold'>
     <h1 className='text-xl  text-black '>Quick Links</h1>
    <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
+      <a href="">About Us</a>
+      <a href="">Our Agents</a>
+      <a href="">Contact Us</a>
+      <a href="">FAQ</a>
     </div>
 
-    <div className='w-full text-gray-500 flex flex-col font-semibold  gap-4  sm:text-center'>
+    <div className='w-full text-gray-500 flex flex-col font-semibold  gap-4 '>
     <h1 className='text-xl text-black'>Main Pages</h1>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
+      <a href="">Main Pages</a>
+      <a href="">Properties</a>
+      <a href="">Bedrooms</a>
+      <a href="">Categories</a>
+      <a href="">Blogs</a>
     </div>
 
-    <div className='hidden w-full text-gray-500 font-semibold sm:flex flex-col gap-4  text-center'>
+    <div className='hidden w-full text-gray-500 font-semibold sm:flex flex-col gap-4  '>
     <h1 className='text-xl text-black'>Other</h1>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
-      <a href="">Home</a>
+      <a href="">Error 404</a>
+      <a href="">Form Submit</a>
+      <a href="">Privacy Policy</a>
+  
     </div>
  
 </div>

@@ -15,9 +15,12 @@ import Faq from '../Components/Faq'
 import PropCollection from '../Components/PropCollection'
 import Carousel from '../Components/Carousel'
 
-
+import { useEffect } from 'react'
 
 function Home() {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
   return (
     <div >
       

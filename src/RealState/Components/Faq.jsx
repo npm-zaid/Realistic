@@ -47,8 +47,8 @@ function Faq() {
   };
 
   return (
-    <div className="">
-       <p className='bg-[#EDF3FF] w-fit m-auto font-semibold text-[2vw] mb-5 text-[#3675ff] px-8 py-2 rounded-full'>FAQ</p>
+    <div className="my-10">
+     <p className='text-4xl font-semibold mb-4 text-center bg-gradient-to-r from-[#3675ff] via-[#0c7aa9] to-[#000000] bg-clip-text text-transparent'>Frequently Asked Questions ?</p>
       <div className=" rounded-2xl p-4 bg-[#EDF3FF]">
         {tabs.map((tab, index) => (
           <div

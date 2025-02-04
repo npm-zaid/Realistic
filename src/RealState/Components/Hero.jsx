@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import heropic from '../Assets/home.avif';
-
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 function Hero() {
   const imgRef = useRef(null);
+  const tl = useRef()
 
   useEffect(() => {
     // Parallax effect handler
@@ -23,9 +27,15 @@ function Hero() {
     };
   }, []);
 
+  useGSAP(()=>{
+    tl.current = gsap.timeline()
+    .from(".hero h1",{y:-100,scale:0.5,opacity:0, duration:.5})
+    .from(".hero p",{y:-100,scale:0.5,opacity:0, duration:.5})
+  })
+
   return (
     <header >
-      <div className="flex justify-center items-center font-semibold flex-col my-14">
+      <div className="hero flex justify-center items-center font-semibold flex-col my-14">
         <p className="bg-[#f2f7ff] text-[#3675ff] px-3 py-2 rounded-full">Real Estate</p>
         <h1 className="sm:text-[60px] text-[9vw] leading-10 mt-10">
           Find the home that fits

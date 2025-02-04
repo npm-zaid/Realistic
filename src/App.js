@@ -14,7 +14,8 @@ import PropInfo from './RealState/Components/PropInfo';
 import AgentInfo from './RealState/Components/AgentInfo';
 import { Route,Routes } from 'react-router-dom';
 import Call from './RealState/Components/Call';
-import Cursor from './RealState/Components/Cursor';
+import BlogInfo from './RealState/Components/BlogInfo'
+
 
 
 
@@ -61,7 +62,7 @@ const App = () => {
      <Route path="/about" element={<About />} /> 
      <Route path="/contact" element={<Contact />} />
      <Route path="/blogs" element={<Blogs/>} />
-     <Route path="/blogs/:blog_Id" element={<Blogs />} />
+     <Route path="/blogs/:blog_Id" element={<BlogInfo />} />
      <Route path="/properties" element={<Properties/>} />
      <Route path="/agents" element={<Agents/>} />
      <Route path="/agents/:agent_Id" element={<AgentInfo/>} />

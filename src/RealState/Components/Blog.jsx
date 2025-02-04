@@ -16,7 +16,7 @@ return(
         return(
         <NavLink to={`/blogs/${blog.btn}`}>
         <div className="h-[50vh] rounded-3xl overflow-hidden">
-        <img className="h-full w-full object-cover" src={blog.url} />
+        <img className="h-full w-full object-cover hover:scale-110 transition-all duration-300 " src={blog.url} />
         </div>
 
         <div className="flex flex-col gap-4 py-4">

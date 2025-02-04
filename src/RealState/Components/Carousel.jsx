@@ -1,137 +1,99 @@
-import React, { useRef } from "react";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Carousel = () => {
-  const cardContainerRef = useRef(null);
-
-  const scrollNext = () => {
-    const container = cardContainerRef.current;
-    container.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100;
+function Carousel() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Tablets
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768, // Mobile
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
-  const scrollPrev = () => {
-    const container = cardContainerRef.current;
-    container.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth / 2 : window.innerWidth - 100;
-  };
-
-  const cards = [
+  const slides = [
     {
-      rating: "4.6",
-      title: "Clash Royale",
-      description:
-        "Dare to step on the sand! From the creators of Clash of Clans, comes Clash Royale, a real-time multiplayer game starring your favorite Clash.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/1.png",
+      id: 1,
+      name: "Andy Smith",
+      location: "New York, NY",
+      describe:
+        "Realestic turned our house hunt into a smooth and enjoyable experience. Perfect for anyone looking to buy their first home!",
+      image:
+        "https://framerusercontent.com/images/bczeGdNKTrWwY98gGWrdHXwBvnI.webp",
     },
     {
-      rating: "4.1",
-      title: "Assassins Creed",
-      description:
-        "It is a series of video games, comics, books, and shorts of historical fiction. Video games are action-adventure, stealth and open world.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/2.png",
+      id: 2,
+      name: "Emma Johnson",
+      location: "Los Angeles, CA",
+      describe:
+        "An amazing service! They made everything so easy and stress-free. Highly recommend to first-time home buyers.",
+      image:
+        "https://framerusercontent.com/images/AlRfrZRG5AeZFq6ZVozOjD0bgus.jpg",
     },
     {
-      rating: "4.8",
-      title: "Fortnite",
-      description:
-        "Fortnite is a video game of the year 2017 developed by the company Epic Games, released as different software packages that present different game modes.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/4.png",
+      id: 3,
+      name: "Michael Brown",
+      location: "Chicago, IL",
+      describe:
+        "I never thought buying a house would be this simple. The support team was incredible. Thank you, Realestic!",
+      image:
+        "https://framerusercontent.com/images/kC4NaEZxsydpz9tHiu9G7wUvUK8.jpg",
     },
     {
-      rating: "3.9",
-      title: "Angry Birds",
-      description:
-        "Angry Birds is a casual video game from 2009 developed by Rovio Entertainment.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/5.png",
-    },
-    {
-      rating: "4.2",
-      title: "Clash of Clans",
-      description:
-        "Also known as CoC is an online strategy and village building video game, for mobile devices with IOS and Android platforms.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/6.png",
-    },
-    {
-      rating: "4.9",
-      title: "Dark Souls",
-      description:
-        "The Souls series is a series of video games belonging to the role-playing and action genre, created and developed by the company From Software.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/7.png",
-    },
-    {
-      rating: "3.6",
-      title: "Far Cry 4",
-      description:
-        "An open-world first-person action video game developed by Ubisoft Montreal in conjunction with Ubisoft Red Storm.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/8.png",
-    },
-    {
-      rating: "3.8",
-      title: "Final Fantasy",
-      description:
-        "Final Fantasy XV is a video game of the ARPG genre developed by Square Enix, for PlayStation 4, Xbox One, and Microsoft Windows.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/9.png",
-    },
-    {
-      rating: "4.7",
-      title: "Gears of War",
-      description:
-        "Gears of War 4 or Gears 4 is a third-person shooter and action video game developed by The Coalition.",
-      image: "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/10.png",
+      id: 4,
+      name: "Sarah Williams",
+      location: "Austin, TX",
+      describe:
+        "From start to finish, an exceptional experience. Their expertise and guidance helped me find my dream home!",
+      image:
+        "https://framerusercontent.com/images/ie0hz9F9UkilyHfVVz9heaaoKQ.jpg",
     },
   ];
 
   return (
-    <div className="relative flex items-center justify-center bg-gray-100 w-full h-screen overflow-hidden">
-      {/* Left Button */}
-      <button
-        onClick={scrollPrev}
-        className="min-w-[60px] h-[60px] rounded-xl bg-white shadow-lg hover:-translate-y-2 transition-transform duration-200 absolute left-4 z-10"
-      >
-        <i className="bx bxs-chevron-left text-2xl"></i>
-      </button>
+    <div className="max-w-3xl mx-auto px-4 py-10">
+      <Slider {...settings}>
+        {slides.map((slide) => (
+          <div key={slide.id} className="px-3">
+            <div className="bg-blue-500  text-white p-6 rounded-3xl shadow-xl  flex flex-col gap-5">
+              {/* Profile Image */}
+              <div className="w-28 h-28 mx-auto">
+                <img
+                  src={slide.image}
+                  alt={slide.name}
+                  className="object-cover w-full h-full  rounded-full border-4 border-white shadow-2xl shadow-black/60"
+                />
+              </div>
 
-      {/* Card Container */}
-      <div
-        ref={cardContainerRef}
-        className="flex items-center space-x-6 overflow-x-auto scrollbar-hide scroll-smooth px-8 w-full max-w-5xl"
-      >
-        {cards.map((card, index) => (
-          <div
-            key={index}
-            className="min-w-[300px] bg-white rounded-2xl shadow-lg transition-transform duration-200 hover:-translate-y-2 relative"
-          >
-            <h3 className="absolute top-2 left-2 bg-gray-200 px-3 py-1 rounded-lg text-sm font-bold">
-              {card.rating}
-            </h3>
-            <i className="bx bx-heart absolute top-2 right-2 text-xl"></i>
-            <div className="relative overflow-hidden flex justify-center mt-6">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-[200px] object-cover"
-              />
-              <img
-                src={card.image}
-                alt={`${card.title} blur`}
-                className="absolute top-6 blur-md opacity-30 -z-10"
-              />
-            </div>
-            <div className="p-4">
-              <h2 className="font-bold text-lg">{card.title}</h2>
-              <p className="text-sm text-gray-600 mt-2">{card.description}</p>
+              {/* Testimonial Content */}
+              <div className=" text-center w-[80%] m-auto">
+                <p className="text-lg font-light">"{slide.describe}"</p>
+                <h3 className="mt-4 text-xl font-semibold">{slide.name}</h3>
+                <p className="text-gray-200">{slide.location}</p>
+              </div>
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Right Button */}
-      <button
-        onClick={scrollNext}
-        className="min-w-[60px] h-[60px] rounded-xl bg-zinc-800 shadow-lg hover:-translate-y-2 transition-transform duration-200 absolute right-4 z-10"
-      >
-        <i className=" text-white text-2xl"></i>
-      </button>
+      </Slider>
     </div>
   );
-};
+}
 
 export default Carousel;

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { blogsData } from '../Components/data'
+import Blog from '../Components/Blog'
 
 const Blogs = () => {
-
+useEffect(()=>{
+  window.scrollTo(0, 0);
+})
+  
   const blog = blogsData.find((b) => b.btn === 'Resources');
 
   return (
@@ -22,21 +26,7 @@ const Blogs = () => {
       </div>
       
     </div>
-    <div className='flex flex-col gap-8 py-8'>
-        <h1 className='text-xl'>{blog.para1}</h1>
-        <h1 className='text-xl'>{blog.para2}</h1>
-        <h1 className='text-xl'>{blog.para3}</h1>
-        <h1 className='text-xl'>{blog.para4}</h1>
-      </div>
-      <div className='p-5 border-t border-zinc-400'>
-        <div className='flex gap-4 items-center'>
-          <img className='h-20 w-20 rounded-full' src="https://framerusercontent.com/images/kC4NaEZxsydpz9tHiu9G7wUvUK8.jpg?scale-down-to=512" alt="" />
-          <div>
-            <p>written by</p>
-            <p className='text-2xl font-semibold'>{blog.writer}</p>
-          </div>
-        </div>
-      </div>
+    <Blog/>
  </section>
   )
 }

@@ -1,6 +1,23 @@
 import React from 'react'
 import Wpic from '../Assets/BeFApd0BHsxGKeT3w5xAG9ehdOk.jpg'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP,ScrollTrigger);
 function Choose() {
+    useGSAP(()=>{
+        gsap.from('.chooseContent',{
+            x:60,
+            duration:1,
+            opacity:0,
+            scrollTrigger:{
+              trigger:'.chooseTrigger',
+              scroller:'body',
+              start:'top 60%',
+              end:'top 40%',
+              scrub:2
+            }
+          })})
   return (
   <section className='my-12'>
      <div>
@@ -8,9 +25,9 @@ function Choose() {
         <h1 className='sm:text-[3.4vw] text-[8vw] font-semibold leading-10'>What makes us the right partner for </h1>
         <h1 className='sm:text-[3.4vw] text-[8vw] font-semibold '>your real estate?</h1>
       </div>
-      <div className='h-screen relative rounded-3xl overflow-hidden mt-8'>
+      <div className='chooseTrigger h-screen relative rounded-3xl overflow-hidden mt-8'>
         <img src={Wpic} alt="image" className='w-[100%] absolute z-10 h-full object-cover'/>
-        <div className='absolute px-5 py-8 rounded-3xl z-20 sm:top-24 top-36 bg-white sm:w-[30vw] w-[90%]  sm:right-10 right-5'>
+        <div className='chooseContent absolute px-5 py-8 rounded-3xl z-20 sm:top-24 top-36 bg-white sm:w-[30vw] w-[90%]  sm:right-10 right-5'>
             <div className='flex gap-8'>
                 <div><i className="text-2xl text-[#3859FF]  ri-check-double-line"></i></div>
                 <div>
