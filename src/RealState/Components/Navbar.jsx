@@ -38,9 +38,9 @@ function Navbar() {
       .to('.sidebar', {
         x: '0%',
         ease: 'power4.in',
-        duration: .5,
+        duration: 0.7,
       })
-      .from('a', { opacity: 0, x: 100, ease: 'power4.in',duration:.5, stagger:0.05 });
+      .from('.sidebar a', { opacity: 0, x: 100, ease: 'power4.in',duration:.5, stagger:0.05 });
   });
 
   // Toggle sidebar animation based on menu state
