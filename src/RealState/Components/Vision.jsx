@@ -32,7 +32,7 @@ function Vision() {
     })
           
   return (
-   <section  className=' sm:gap-4 gap-16 my-14 flex sm:flex-row flex-col visionTrigger '>
+   <section  className=' sm:gap-4 gap-16 my-14 flex sm:flex-row flex-col visionTrigger overflow-hidden '>
 
     <div className=" w-full visionContent1  flex flex-col   sm:gap-5 gap-4 ">
     <p className='sm:text-md text-xl '>Our Vision</p>
