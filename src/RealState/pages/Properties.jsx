@@ -6,7 +6,7 @@ import GLBModel from '../Components/GLBModel'
 const Properties = () => {
   return (
     <div>
-      
+      <GLBModel/>
       <Propheader/>
       
     </div>
