@@ -29,10 +29,10 @@ function Home() {
         <PropCollection/>
         <Features/>
         <Mission/>
-        <AgentsData/>
+        <Process/>
         <Choose/>
         <Testimonials/>
-        <Process/>
+        
         <Blog/>
        
         <Faq/>

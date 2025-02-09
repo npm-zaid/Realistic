@@ -17,7 +17,7 @@ function PropCollection() {
     </div>
     <div className="cards-section grid sm:grid-cols-3 grid-cols-1  gap-4">
     {
-     cards.map((card, index) => (
+     cards.slice(0,3).map((card, index) => (
         <Card key={index} {...card} />
       ))
     }

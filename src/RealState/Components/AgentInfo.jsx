@@ -1,10 +1,14 @@
 
+import { useEffect } from "react";
 import { agentsData } from "./data";
 import { NavLink, useParams } from "react-router-dom";
 const AgentInfo = () => {
   const { agent_Id } = useParams();
   const agent = agentsData.find((agent) => agent.name === agent_Id);
   console.log(agent);
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
   return (
     <section className="min-h-screen ">
       <div className="grid my-10 m-auto sm:grid-cols-12 grid-cols-1 h-screen sm:h-[60vh] p-4 rounded-[40px] bg-[#3675FF]">

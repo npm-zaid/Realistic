@@ -1,9 +1,15 @@
 import React from 'react'
 import { blogsData } from '../Components/data'
 import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 const BlogInfo = () => {
+
     const { blog_Id } = useParams();
     const blog = blogsData.find((b) => b.btn === blog_Id);
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
   return (
     <section>
         <div className='py-10'>

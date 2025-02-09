@@ -136,6 +136,9 @@ function Navbar() {
             <NavLink onClick={handleNavLinkClick} to='/about'>
               About
             </NavLink>
+            <NavLink onClick={handleNavLinkClick} to='/agents'>
+              Agents
+            </NavLink>
             <NavLink onClick={handleNavLinkClick} to='/contact'>
               Contact
             </NavLink>

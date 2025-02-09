@@ -38,10 +38,8 @@ const PropInfo = ()=>{
         </div>
 
         {/* CALCULATION */}
-        <div className='flex flex-col sm:flex-row sm:my-0 my-16  items-center gap-8 h-screen'>
-<div className='sm:w-[60%] w-full font-semibold text-2xl  '>
-
-
+        <div className='flex flex-col sm:flex-row  my-16  items-center gap-16'>
+<div className='sm:w-[50%]  w-full font-semibold text-2xl'>
 <div className='flex justify-between p-5 border-b border-gray-300'>
 <p>Size</p>
 <p>{property.length} sq.rt</p>
@@ -73,7 +71,7 @@ const PropInfo = ()=>{
 </div>
 
 </div>
-<div className='sm:w-[40%] w-full rounded-2xl overflow-hidden'>
+<div className='sm:w-[45%] w-full rounded-2xl overflow-hidden'>
 <img className='h-full w-full object-contain' src="https://framerusercontent.com/images/qx0ewX2XwtSCPSA6KF4ZrTSpmxs.webp?scale-down-to=1024" alt="" />
 </div>
         </div>

@@ -15,7 +15,7 @@ const About = () => {
   return (
    <>
   
-   <You/>
+  
    <AboutInfo/>
    <AboutInfo2/>
    <Process/>
