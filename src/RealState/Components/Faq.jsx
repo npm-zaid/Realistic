@@ -3,42 +3,31 @@ import React, { useState } from 'react';
 
 const tabs = [
   {
-    title: 'How do UI components improve UX?',
+    title: 'How do I start the process of buying a home?',
     description:
-      'UI components can improve UX by providing familiar, consistent interactions that make it easy for users to navigate and interact with an application.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format',
+      'The first step is to get pre-approved for a mortgage. This will help you understand your budget and show sellers that you’re a serious buyer. Next, work with a real estate agent to find properties that meet your needs.',
   },
   {
-    title: 'Common UI component design challenges?',
+    title: 'What should I look for in a neighborhood?',
     description:
-      'Some common challenges include maintaining consistency across different devices and screen sizes, ensuring compatibility with various browsers and assistive technologies, and balancing flexibility with ease of use.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format',
+      'Consider factors like safety, school districts, proximity to work, public transportation, and local amenities like parks, restaurants, and shopping centers. Visiting the neighborhood at different times of the day can also give you a better feel for the area.',
   },
   {
-    title: 'Ensuring UI component responsiveness?',
+    title: 'How long does it take to close on a house?',
     description:
-      'Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes and orientations.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format',
+      'The closing process typically takes 30 to 45 days, but it can vary depending on factors like the complexity of the transaction, the responsiveness of all parties involved, and the type of financing.',
   },
   {
-    title: 'Ensuring UI component responsiveness?',
+    title: 'What costs are involved in buying a home?',
     description:
-      'Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes and orientations.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format',
+      'In addition to the down payment, you’ll need to budget for closing costs, which include fees for appraisal, title insurance, inspections, and more. You should also consider ongoing costs like property taxes, insurance, and maintenance.',
   },
   {
-    title: 'Ensuring UI component responsiveness?',
+    title: 'Can I sell my home while buying a new one?',
     description:
-      'Developers can ensure the responsiveness of UI components by using techniques such as fluid layouts, flexible grids, and media queries to adapt the components to different screen sizes and orientations.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format',
+      'Yes, it’s possible to sell your current home while buying a new one. Many buyers use a bridge loan or negotiate a rent-back agreement with the buyer of their current home to ensure a smooth transition.',
   },
 ];
-
 function Faq() {
   const [activeIndex, setActiveIndex] = useState(null);
 

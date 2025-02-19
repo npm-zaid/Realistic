@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function Call() {
   return (
@@ -8,7 +9,7 @@ function Call() {
         <h1 className='sm:text-[3.4vw] text-[6.2vw] font-semibold leading-10'>Ready to make your step in real </h1>
         <h1 className='sm:text-[3.4vw] text-[6.2vw] font-semibold '>state? Book Now.</h1>
         </div>
-        <button className='px-5 py-3 font-bold bg-white  rounded-full text-nowrap text-black'>View Properties</button>
+        <NavLink to='/properties' className='px-5 py-3 font-bold bg-white  rounded-full text-nowrap text-black'>View Properties</NavLink>
     </div>
   )
 }

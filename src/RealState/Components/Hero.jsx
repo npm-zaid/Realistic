@@ -3,6 +3,7 @@ import heropic from '../Assets/home.avif';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import vid from '../Assets/day_video.mp4'
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 function Hero() {
   const imgRef = useRef(null);
@@ -45,10 +46,11 @@ function Hero() {
         </h1>
       </div>
       <div className="sm:h-[120vh] h-[70vh] w-full rounded-[50px]  relative overflow-hidden">
-        <img
+        <video
+        loop autoPlay muted
           ref={imgRef}
           className="sm:rounded-[50px] rounded-[30px] h-full w-full object-cover transition-transform duration-300 ease-out"
-          src={heropic}
+          src={vid}
           alt="Hero"
         />
       </div>

@@ -1,34 +1,18 @@
-import React, { useEffect, useRef } from "react";
-
+import React, { useRef } from "react";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import heropic from '../Assets/home.avif';
 const AboutInfo = () => {
-  const imgRefs = useRef([]);
-
-  useEffect(() => {
-    // Parallax effect handler
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      // Apply parallax effect to each image
-      imgRefs.current.forEach((img, index) => {
-        if (img) {
-          const speed = 0.2 + index * 0.1; // Vary speed slightly for each image
-          img.style.transform = `translateY(${scrollY * speed}px)`;
-        }
-      });
-    };
-
-    // Attach scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const ta = useRef(null)
+  useGSAP(()=>{
+    ta.current = gsap.timeline()
+    .from(".about h1",{y:-100,scale:0.5,opacity:0, duration:.5})
+    .from(".about p",{y:-100,scale:0.5,opacity:0, duration:.5})
+  })
 
   return (
     <section>
-      <div className="text-center font-semibold my-14">
+      <div className="about text-center font-semibold my-14">
         <p className="bg-[#EDF3FF] w-fit m-auto font-semibold text-[#3675ff] px-5 py-2 rounded-full">
           About
         </p>
@@ -41,30 +25,27 @@ const AboutInfo = () => {
       </div>
 
       <div className="h-[110vh] grid sm:grid-cols-2 grid-rows-2 gap-6">
-        {/* Large Image with Parallax */}
-        <div className="row-span-2 rounded-3xl bg-gray-300  overflow-hidden">
+        {/* Large Image */}
+        <div className="row-span-2 rounded-3xl bg-gray-300 overflow-hidden">
           <img
-            ref={(el) => (imgRefs.current[0] = el)} // Attach ref to the first image
-            src="https://framerusercontent.com/images/qwvmH0EQXSPYJ0JrSilGkq7aUzk.webp?scale-down-to=1024"
-            className="h-full object-cover w-full   duration-300 ease-out"
+            src={heropic}
+            className="h-full object-cover w-full"
             alt="Expertise"
           />
         </div>
 
-        {/* Smaller Images with Parallax */}
+        {/* Smaller Images */}
         <div className="rounded-3xl overflow-hidden bg-gray-300">
           <img
-            ref={(el) => (imgRefs.current[1] = el)} // Attach ref to the second image
-            src="https://framerusercontent.com/images/BeFApd0BHsxGKeT3w5xAG9ehdOk.jpg"
-            className="h-full w-full  object-cover transition-transform duration-300 ease-out"
+            src="https://lifestyleinvestmentsind.com/images/About/how-we-work.png"
+            className="h-full w-full object-cover"
             alt="Consultation"
           />
         </div>
         <div className="rounded-3xl overflow-hidden bg-gray-300">
           <img
-            ref={(el) => (imgRefs.current[2] = el)} // Attach ref to the third image
             src="https://framerusercontent.com/images/ybeQwZzWtmmY9eSaqgljwDs31hI.jpg?scale-down-to=1024"
-            className="h-full w-full  object-cover transition-transform duration-300 ease-out"
+            className="h-full w-full object-cover"
             alt="Real Estate Ideas"
           />
         </div>

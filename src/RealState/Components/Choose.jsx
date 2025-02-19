@@ -26,7 +26,7 @@ function Choose() {
         <h1 className='sm:text-[3.4vw] text-[8vw] font-semibold '>your real estate?</h1>
       </div>
       <div className='chooseTrigger h-screen relative rounded-3xl overflow-hidden mt-8'>
-        <img src={Wpic} alt="image" className='w-[100%] absolute z-10 h-full object-cover'/>
+        <img src='https://lifestyleinvestmentsind.com/images/About/mission.png' alt="image" className='w-[100%] absolute z-10 h-full object-cover'/>
         <div className='chooseContent absolute px-5 py-8 rounded-3xl z-20 sm:top-24 top-36 bg-white sm:w-[30vw] w-[90%]  sm:right-10 right-5'>
             <div className='flex gap-8'>
                 <div><i className="text-2xl text-[#3859FF]  ri-check-double-line"></i></div>

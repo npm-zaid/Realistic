@@ -1,11 +1,19 @@
-
-import React from 'react';
+import React, { useRef } from "react";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { agentsData } from "../Components/data";
 import { NavLink } from 'react-router-dom';
 function AgentsData() {
+  const taj = useRef(null)
+  useGSAP(()=>{
+   taj.current = gsap.timeline()
+    .from(".agent h1",{y:-100,scale:0.5,opacity:0, duration:.5})
+    .from(".agent p",{y:-100,scale:0.5,opacity:0, duration:.5})
+  })
+
   return (
     <section className='min-h-screen  flex flex-col items-center'>
-        <div className="text-center font-semibold my-14">
+        <div className=" agent text-center font-semibold my-14">
           <p className="bg-[#EDF3FF] w-fit m-auto font-semibold text-[#3675ff] px-5 py-2 rounded-full">
             Agents
           </p>
