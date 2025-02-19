@@ -1,11 +1,15 @@
 import { useParams} from 'react-router-dom'
 import { cards } from './data'
+import { useEffect } from 'react'
 
 const PropInfo = ()=>{
     const { prop_Id } = useParams()
     console.log(prop_Id)
     const property = cards.find((card)=>card.id === prop_Id)
-    console.log(property)
+
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+    })
     return(
         <section className="min-h-screen">
 
