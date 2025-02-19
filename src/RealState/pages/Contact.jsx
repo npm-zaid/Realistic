@@ -3,6 +3,7 @@ import { useEffect,useState,useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import conImg from '../Assets/Screenshot (311).png'
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 const Contact = () => {
@@ -29,30 +30,30 @@ const Contact = () => {
     <h1 className='sm:text-[4vw]  text-[7.4vw]'>expert  <span className='text-[#3675ff]'>assistance</span> </h1>
     </div>
     <div className='h-[90vh]  gap-8 relative text-center'>
-<img className='h-full w-full object-cover rounded-3xl ' src='https://framerusercontent.com/images/BeFApd0BHsxGKeT3w5xAG9ehdOk.jpg'/>
-<div className='p-5 absolute w-[80%]  right-[10%] rounded-3xl bg-white -bottom-10 grid sm:grid-cols-3  sm:gap-0 gap-10'>
+<img className='h-full w-full object-cover rounded-3xl object-top ' src={conImg}/>
+<div className='p-5  absolute w-[80%]  right-[10%] rounded-3xl bg-white -bottom-10 grid sm:grid-cols-3  sm:gap-0 gap-10'>
   <div className='flex  items-center sm:justify-center gap-5'>
     <div className='px-3 py-2 rounded-full bg-gray-200'><i className="text-2xl ri-mail-send-line"></i></div>
     <div className='font-semibold'>
       <p className='w-fit'>email address:</p>
-    <a href='mailto:zaidcodes.404@gmail.com' className='text-[#3675FF] text-xl'>testing@gmail.com</a></div>
+    <a href='mailto:zaidcodes.404@gmail.com' className='text-[#3675FF] text-lg'>testing@gmail.com</a></div>
   </div>
   <div className='flex  items-center sm:justify-center gap-5'>
     <div className='px-3 py-2 rounded-full bg-gray-200'><i className="text-2xl ri-phone-line"></i></div>
     <div className='font-semibold'>
       <p className='w-fit'>phone number:</p>
-    <a href='tel:9411903629' className='text-[#3675FF] text-xl'>+ 123 456 789</a></div>
+    <a href='tel:9411903629' className='text-[#3675FF] text-lg'>+ 123 456 789</a></div>
   </div>
   <div className='flex  items-center sm:justify-center gap-5'>
     <div className='px-3 py-2 rounded-full bg-gray-200 '><i className="text-2xl inline-block animate-bounce  ri-map-pin-line"></i></div>
     <div className='font-semibold'>
       <p className='w-fit'>location:</p>
-    <a href='' className='text-[#3675FF] text-xl'>Doha, Qatar</a></div>
+    <a href='' className='text-[#3675FF] text-lg'>Doha, Qatar</a></div>
   </div>
 </div>
     </div>
 
-    <div className="flex flex-col md:flex-row mt-14 sm:justify-between min-h-screen sm:p-10 bg-white">
+    <div className="flex flex-col md:flex-row mt-14 sm:justify-between pt-10 ">
       <div className="w-full md:w-1/2 ">
         <h1 className="sm:text-[4vw] text-[8vw]  font-semibold text-black sm:leading-[5vw] ">
           Fill out this form, Let's <span className="text-blue-600">get in touch</span>

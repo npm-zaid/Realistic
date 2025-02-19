@@ -45,7 +45,7 @@ function Hero() {
           your life <span className="text-[#3675ff]">perfectly</span>
         </h1>
       </div>
-      <div className="sm:h-[120vh] h-[70vh] w-full rounded-[50px]  relative overflow-hidden">
+      <div className="sm:h-[120vh] h-screen w-full rounded-[50px]  relative overflow-hidden">
         <video
         loop autoPlay muted
           ref={imgRef}
