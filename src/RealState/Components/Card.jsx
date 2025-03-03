@@ -14,11 +14,11 @@ const Card = ({id,length,img,title,location,price,bedrooms,bathrooms,isSale})=>{
           <h2 className='font-semibold text-2xl my-2'>{title}</h2>
           <div className='flex gap-4 pt-4 text-sm text-[#8C8C8C]'> 
     <div className='flex gap-2'>
-              <img src={bed} className='w-[1.4vw]' alt="bed" />
+              <img src={bed} className='sm:w-[1.4vw] w-[4vw]' alt="bed" />
               <p>{bedrooms}</p>
             </div>
             <div className='flex gap-2 px-4 border-x-2'>
-              <img src={bath} className='w-[1.4vw]' alt="bed" />
+              <img src={bath} className='sm:w-[1.4vw] w-[4vw]' alt="bed" />
               <p>{bathrooms}</p>
             </div>  
             <p>{length} sqrt ft.</p>
